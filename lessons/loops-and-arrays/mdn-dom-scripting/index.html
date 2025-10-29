@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple DOM example</title>
+    <style>
+      .highlight {
+        color: white;
+        background-color: black;
+        padding: 10px;
+        width: 250px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+      <section>
+        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
+      </section>
+      <script>
+        // so first step in fuckin witta dom is getting a variable
+        // that variable holds the js model of whatever you're linking to
+        // connect that variable to the dom with = document.querySelector("");
+        // the query selector seems to pick up an element 
+        const link = document.querySelector("a");
+        // .textContent seems to update the text within an element.
+        link.textContent = `fuck you I won't do what you tell me`;
+        // .href makes sense
+        link.href = `https://youtu.be/bWXazVhlyxQ?si=mG7yyczxyr0a4pWy&t=252`;
+        // link a new js var to an existing html element
+        const sect = document.querySelector("section");
+        // createElement is kind of like the same concept as linking to existing
+        const para = document.createElement("p");
+        para.textContent = `fuck you I won't do what you tell me`;
+        // gotta put it somewhere though: where does the created element go?
+        sect.appendChild(para);
+        /* so u can basically be like "here is some text i can stick somewhere"
+            / not really sure the point of this vs just updating text content
+            / but im sure theres some kind of reason
+        */
+        const text = document.createTextNode(` (remember jamming to this so hard that
+        it shook the car with Maddy when we were chilling with Abby in tampa lol)`);
+        // where to put random node text?
+        // I guess in another variable?
+        const linkPara = document.querySelector("p");
+        linkPara.appendChild(text);
+        // you can delete shit too, nice
+        // sect.removeChild(linkPara);
+        // add an external css class:
+        para.classList.add("highlight");
+      </script>
+  </body>
+</html>

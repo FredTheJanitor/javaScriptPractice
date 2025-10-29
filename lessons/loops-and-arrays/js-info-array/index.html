@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// leaving this in because I'm trying to learn not write clean code lmao
+// -------------------------------------------------------------------------------
+// // create a variable that recieves an input of a number value from a prompt
+// let numberEntered = (prompt(`enter a number`));
+// // create a variable that recieves number values as items within an array
+// let numbersList = [];
+// // create a variable that holds the sum of the numbersList numbers
+// let finalSum = 0;
+// // if the prompt is a number
+// let addArrayItems = function() {
+//         //      for each number in the sumArray 
+//     let pullAnArrayItem = function() {
+//         for (number of numbersList) {
+//             //      return the number
+//             let numberToAdd = number;
+//             // take numberToAdd and add it to sum
+//             finalSum += numberToAdd;
+//         }
+//         //      If there is a previous sum of numbers
+//         //      add the new number to that sum
+//         //      otherwise If there is 1 previous number
+//         //      add the number to the previous number
+//         }
+//         // then return the final sum to a variable that can be alerted
+//     alert(finalSum);
+//     };
+
+// if (typeof(numberEntered)=="number") {
+// // push the prompt value to the array
+// numbersList.push(numberEntered);
+// }
+// // otherwise if the prompt is a non numeric value
+// else if (typeof(numberEntered)!="number") {
+//     // Sum the items within the array
+//     addArrayItems();
+// }    
+//     // continue to the next step
+// // otherwise if the prompt is an empty string
+// else if (numberEntered === "") {
+//     addArrayItems();
+// }
+//     // Sum the items within the array
+//     // then return the final sum to a variable that can be alerted
+//     // continue to the next step
+// // otherwise if the prompt is null due to clicking cancel
+// else if (numberEntered === null) {
+//     addArrayItems();
+// } else {
+//     alert(`error`);
+// }
+//     // Sum the items within the array
+//     // then return the final sum to a variable that can be alerted
+//     // continue to the next step
+// // 
+// // alert the sum variable 
+// // and break the process
+// ----------------------------------------------------------------------------
+// ok here is cleaner code so i can try to debug:
+// let numberEntered = (prompt(`enter a number`));
+// let numbersList = [];
+// let finalSum = 0;
+// // this seems hella hacked why dont i just scrap this and do... while?
+// //  isnt a do while or a while loop best for demanding user input anyways?
+// let addArrayItems = function() {
+//     let pullAnArrayItem = function() {
+//         for (number of numbersList) {
+//             let numberToAdd = number;
+//             finalSum += numberToAdd;
+//         }
+//         // i moved this one level deeper
+//         alert(finalSum);
+//     }
+//     };
+// if (typeof(numberEntered)=="number") {
+// numbersList.push(numberEntered);
+// } else if (typeof(numberEntered)!="number") {
+//     addArrayItems();
+// } else if (numberEntered === "") {
+//     addArrayItems();
+// } else if (numberEntered === null) {
+//     addArrayItems();
+// } else {
+//     alert(`error`);
+// }
+// -------------------------------------------------------------------------------
+// Immediately gave up on debug attempt basically because ther are better ways to do this
+// 
+// create an array to catch the input
+// let numberList = [];
+// // until stopped (or while true)
+// while (true) {
+//     // prompt user for an input
+//     let userInput = prompt(`enter a number`);
+//     // if input is not a number
+//     if (parseFloat(userInput) === NaN) {
+//         // break
+//         break;
+//     // if input is an empty string or null
+//     } else if (userInput === "" || userInput === null ) {
+//         // break
+//         break;
+//     // if input is a number
+//     } else if (typeof(parseFloat(userInput)) === "number" ) {
+//         // save number entered to an array
+//         numberList.push(parseFloat(userInput));
+//         // keep going (don't break)
+//     } else {
+//         alert(`error`);
+//         break;
+//     }       
+// }
+// console.log(numberList);
+// // I Googled methods for summing up arrays because I remembered that from the last article
+// // but i think the vibe of this article is to get me to do this the hard way:
+// // add all of the items in numberList together
+// const sum = numberList.reduce((accumulator, currentValue)=> {
+//     return accumulator + currentValue;
+// }, 0);
+// // alert the total sum 
+// alert(sum);
+// // yeah reflecting on this... there is no new "array knowledge" getting used here, this is
+// // just me flexing my new-found loop knowledge and googling properly.
+// // going to comment out, reduce the first part without the algorithm and try it the ol
+// // fashioned way
+// ---------------------------------------------------------------------------------------
+function sumInput() {
+    let numberList = [];
+    while (true) {
+        let userInput = prompt(`enter a number`);
+        if (parseFloat(userInput) === NaN) {
+            break;
+        } else if (userInput === "" || userInput === null ) {
+            break;
+        } else if (typeof(parseFloat(userInput)) === "number" ) {
+            numberList.push(parseFloat(userInput));
+        } else {
+            alert(`error`);
+            break;
+        }       
+    }
+    console.log(numberList);
+    // find a way to list all of the items within number list
+        // list an item within number list
+    let sum = 0;
+    for (i = 0;i < numberList.length; i++) {
+        let numberFromList = parseFloat(numberList[i]);
+        sum += numberFromList; 
+        }
+    alert(sum);
+    // wow ok that worked nice. i did it the old school way but hey i think those type of
+    // for loops transfer to other languages better probably anyways lol
+}
+sumInput();
+    </script>
+</body>
+</html>
