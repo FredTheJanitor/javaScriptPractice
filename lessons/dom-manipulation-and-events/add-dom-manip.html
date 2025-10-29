@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple DOM example</title>
+    <style>
+  .highlight {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    width: 250px;
+    text-align: center;
+  }
+</style>
+  </head>
+  <body>
+      <section>
+        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
+      </section>
+      <script>
+        const link = document.querySelector("a");
+        link.textContent = "the butt";
+        link.href = "https://www.butt.com";
+
+        const section = document.querySelector("section");
+        const para = document.createElement("p");
+        para.textContent = "the butt is the butt of the butts, but butt's butt is nothing but butt";
+        section.appendChild(para);
+        const text = document.createTextNode( " because the butt is the butt of the butts!");
+        const linkPara = document.querySelector("p");
+        linkPara.appendChild(text);
+        section.appendChild(linkPara);
+        // section.removeChild(linkPara);
+        linkPara.remove();
+        para.classList.toggle("highlight");
+        
+      </script>
+  </body>
+</html>

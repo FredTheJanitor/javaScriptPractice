@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const add7=(n)=>n+7;
+        console.log(add7);
+        console.log(add7(62));
+
+        const multiply=(a,b)=>a*b;
+        console.log(multiply);
+        console.log(multiply(3,4));
+
+        // function capitalize(anyString) {
+        //     let text = `${anyString.toUpperCase.charAt(0)}${anyString.toLowerCase.slice(1)}`;
+        //     console.log(text);
+        // }
+        // capitalize("sadkjfSS");
+
+        // commented out failure
+
+        // const capitalize = (myString) => {
+        //     myString = prompt("type a string bitch", "AsSDeS");
+        //     let cruchatizeMeCaptain = myString.slice(0,1);
+        //     let djKhaled = cruchatizeMeCaptain.toUpperCase;
+        //     let anotherOne = myString.slice(1);
+        //     let weDaBest = anotherOne.toLowerCase;
+        //     let weDaBestMusic = `${djKhaled}${weDaBest}`;
+        //     return weDaBestMusic;
+        //     console.log(weDaBestMusic);
+        // }
+        // console.log(capitalize());
+
+        // commented out additional failure
+
+        function capitalize(myString) {
+            let firstCap = `${myString.slice(0,1).toUpperCase()}${myString.slice(1).toLowerCase()}`
+            console.log(firstCap);
+            console.log(capitalize);
+        }
+        
+        capitalize(prompt(`type a string`));
+
+        // ok so i think the main reason the previous tries didnt work because of omitting
+        // parenthesis for string methods
+
+        function lastLetter(anotherOne) {
+            let lastLetterString = `${anotherOne.slice(-1)}`;
+            console.log(lastLetterString);
+            console.log(lastLetter);
+        }
+        lastLetter(prompt(`type another string`));
+
+
+    
+
+    </script>
+</body>
+</html>

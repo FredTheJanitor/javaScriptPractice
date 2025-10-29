@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>LOOK IN THE CONSOLE! lol</h1>
+    <script>
+// 1️⃣ .filter()
+// Filter all animals that live longer than 10 years.
+
+const animals = [
+  { name: "dog", lifespan: 13 },
+  { name: "cat", lifespan: 15 },
+  { name: "hamster", lifespan: 3 },
+  { name: "parrot", lifespan: 50 }
+];
+const animals10Plus = animals.filter((animal)=>animal.lifespan>10);
+console.table(animals10Plus);
+
+// 2️⃣ .map()
+// Create an array of book titles with their authors.
+
+const books = [
+  { title: "1984", author: "George Orwell" },
+  { title: "Dune", author: "Frank Herbert" },
+  { title: "It", author: "Stephen King" }
+];
+const bookTitles = books.map((book)=>book.title);
+console.table(bookTitles);
+
+// 3️⃣ .sort()
+// Sort the planets by distance from the sun (ascending).
+
+const planets = [
+  { name: "Mercury", distance: 57 },
+  { name: "Earth", distance: 149 },
+  { name: "Mars", distance: 228 }
+];
+const planetsByDistance = planets.sort((a,b)=>a.distance-b.distance);
+console.table(planetsByDistance);
+
+// 4️⃣ .reduce() (sum)
+// Sum up all scores in an array.
+
+const scores = [5, 8, 3, 10, 7];
+const sumOfScores = scores.reduce((accum,number)=>accum+number);
+console.table(sumOfScores);
+
+// 5️⃣ .map() + .filter() combo
+// Get only city names longer than 6 characters.
+
+const cities = [
+  { name: "Paris" },
+  { name: "Amsterdam" },
+  { name: "Tokyo" },
+  { name: "Barcelona" }
+];
+const cityNames6Plus = cities
+                        // .map(city=>city.name)
+                        // .filter((cityName)=>cityName.length>=6);
+                        .filter(city=>city.name.length>6)
+console.table(cityNames6Plus);
+
+// 6️⃣ DOM-like practice (no DOM needed)
+
+// Get all names starting with “S”.
+
+const links = ["Sam", "Steve", "Maria", "Sara", "Jon"];
+const sNameLinks = links.filter(name=>name[0]==="S");
+console.table(sNameLinks);
+
+// 7️⃣ Split + sort
+// Sort a list of names (“Last, First”) alphabetically by first name.
+const randomNames = ["Smith, John", "Adams, Carl", "Baker, Anna"];
+// I'm forgetting how to deconstruct the split items into a new array
+// i think starting with sort is the key here
+const namesByFirstAlph = randomNames.sort((a,b)=>{
+    // yeah so by starting with sort, we can break into the groups I was remembering
+    // basically the split is done into a new array object with a last and first name, split at
+    // the splitter, so yeah.
+    const [lastA, firstA] = a.split(", ");
+    const [lastB, firstB] = b.split(", ");
+    return (firstA > firstB) ? 1 : -1
+})
+console.table(namesByFirstAlph);
+
+
+// 8️⃣ .reduce() tally
+// Tally weather types in a week.
+const weather = ["sunny", "rainy", "cloudy", "sunny", "sunny", "rainy"];
+const weatherTally = weather.reduce((accum,item)=>{
+    if (!accum[item]) {
+        accum[item] = 0
+    }
+    accum[item]++;
+    return accum;
+},
+{})
+console.table(weatherTally);
+
+// 🏋️‍♀️ ROUND 2 — SAME 8 EXERCISES, DIFFERENT CONTEXTS
+// 1️⃣ .filter() — only students over 18
+const students = [
+  { name: "Liam", age: 17 },
+  { name: "Emma", age: 20 },
+  { name: "Noah", age: 19 }
+];
+const studentsOver18 = students.filter((objectItem)=>objectItem.age>18);
+console.table(studentsOver18);
+
+// 2️⃣ .map() — convert prices to include tax
+const prices = [10, 15, 30];
+const pricesPlusTax = prices.map((price)=>price*1.07);
+console.table(pricesPlusTax);
+
+// 3️⃣ .sort() — sort movies by release year (newest → oldest)
+const movies = [
+  { title: "Inception", year: 2010 },
+  { title: "The Matrix", year: 1999 },
+  { title: "Oppenheimer", year: 2023 }
+];
+const moviesByReleaseYear = movies.sort((a,b)=>{
+    return a.year-b.year
+});
+console.table(moviesByReleaseYear);
+
+
+// 4️⃣ .reduce() — total characters across all words
+const words = ["hello", "world", "coding"];
+const totalCharacterCount = words.reduce((totaller,item)=>totaller+item.length,0);
+console.table(totalCharacterCount);
+
+
+// 5️⃣ .map() + .filter() — get uppercase fruits longer than 5 letters
+const fruits = ["apple", "banana", "cherry", "pear"];
+const fruitUpperCaseOver5 = fruits
+                              .filter((fruit)=>fruit.length>5)
+                              // i originally had fruit.slice[1] here with squares on accident
+                              // also I forgot () after toUpperCase, so syntax struggles but nothin
+                              // too crazy.
+                              .map((fruit)=>fruit[0].toUpperCase() + fruit.slice(1));
+console.table(fruitUpperCaseOver5);
+
+
+// 6️⃣ DOM-like — filter names that contain “an”
+const aListOfNames = ["Brandon", "Samantha", "Kyle", "Diana"];
+const namesWithAn = aListOfNames.filter((name)=>name.includes("an"));
+console.table(namesWithAn);
+
+// 7️⃣ Split + sort — sort by last name length
+const peopleArrayMessy = ["Doe, Jane", "Smith, Alexander", "Brown, Ed", "Washington, Billy", "Xi, Ming"];
+const peopleArrayClean = peopleArrayMessy.sort((a,b)=>{
+  const [lastNameA, firstNameA] = a.split(", ");
+  const [lastNameB, firstNameB] = b.split(", ");
+  return lastNameA.length - lastNameB.length;
+}) 
+console.table(peopleArrayClean);
+
+// 8️⃣ .reduce() tally — pets owned
+const ilanaPets = ["dog", "cat", "dog", "bird", "cat", "dog", "racoon", "gay", "cat", "cat", "dog"];
+const petTallyTotal = ilanaPets.reduce((counter,petString)=>{
+  if (!counter[petString]) {
+    counter[petString]=0
+  }
+  counter[petString]++
+  return counter
+},{})
+console.table(petTallyTotal);
+
+    </script>
+    
+</body>
+</html>
