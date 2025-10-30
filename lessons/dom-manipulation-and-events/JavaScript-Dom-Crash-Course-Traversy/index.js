@@ -23,3 +23,6 @@
 // console.log(document.getElementById('header-title'))
 var headerTitle = document.getElementById('header-title');
 console.log(headerTitle);
+// headerTitle.textContent = 'whaddap';
+// console.log(headerTitle.textContent);
+headerTitle.innerHTML = '<h3>Hello</h3>';
