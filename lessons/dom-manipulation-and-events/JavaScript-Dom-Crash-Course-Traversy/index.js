@@ -30,3 +30,20 @@
 // headerTitle.innerHTML = '<h3>Hello</h3>';
 // header.style.borderBottom = 'solid 3px #000';
 
+// Get elementSSSSS by class name
+
+var items = document.getElementsByClassName('list-group-item');
+console.log(items);
+console.log(items[1]);
+items[1].textContent= 'hello 2';
+items[1].style.fontWeight= 'bold';
+items[1].style.backgroundColor = 'yellow';
+
+// this gives an error because
+// items is an HTMLCollections (kinda like a node list)
+// each item has to be affected individually so great for loop opp
+// items.style.backgroundColor = '#f4f4f4';
+
+for(i=0;i<items.length;i++) {
+    items[i].style.backgroundColor= '#f4f4f4'
+}
