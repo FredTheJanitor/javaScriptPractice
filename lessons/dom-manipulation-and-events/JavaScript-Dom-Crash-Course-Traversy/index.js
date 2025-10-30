@@ -66,3 +66,6 @@
 // for(i=0;i<items.length;i++) {
 //     items[i].style.backgroundColor= '#f4f4f4'
 // }
+
+// QuerySelector
+// this is like JQuery i guess, but its only for one item (querySelectorAll is for multiple)
