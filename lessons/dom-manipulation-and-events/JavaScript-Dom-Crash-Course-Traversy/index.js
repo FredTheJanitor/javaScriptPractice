@@ -103,9 +103,14 @@
 
 // TRAVERSING THE DOM
 
-// parent nodes:
+// // parent nodes:
 var itemList = document.querySelector('#items');
-// parentNode property:
-console.log(itemList.parentNode);
-itemList.parentNode.style.backgroundColor = '#f4f4f4';
-console.log(itemList.parentNode.parentNode.parentNode);
+// // parentNode property:
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentNode.parentNode.parentNode);
+
+// // parentElement property:
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentElement.parentElement.parentElement);
