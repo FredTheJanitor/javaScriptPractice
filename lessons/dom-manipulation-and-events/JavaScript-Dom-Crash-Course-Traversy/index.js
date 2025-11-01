@@ -234,7 +234,9 @@ var itemList = document.querySelector('#items');
 var button = document.getElementById('button')
 
 // button.addEventListener("click", runEvent);
-button.addEventListener("dbclick", runEvent);
+// button.addEventListener("dblclick", runEvent);
+// button.addEventListener("mousedown", runEvent);
+button.addEventListener("mouseup", runEvent);
 
 function runEvent(e){
     console.log('Event Type: '+e.type);
