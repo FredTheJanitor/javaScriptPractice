@@ -110,7 +110,20 @@ var itemList = document.querySelector('#items');
 // itemList.parentNode.style.backgroundColor = '#f4f4f4';
 // console.log(itemList.parentNode.parentNode.parentNode);
 
-// // parentElement property:
+// // parentElement property: basically the same in most cases
+
 // console.log(itemList.parentElement);
 // itemList.parentElement.style.backgroundColor = '#f4f4f4';
 // console.log(itemList.parentElement.parentElement.parentElement);
+
+// childNodes
+// console.log(itemList.childNodes);
+// produces nodelist of different list items, 0 index is text node (whitespace)
+// this is because there are linebreaks. which is a PAIN so fuck childNodes.
+// children is way better:
+
+// .children: html collection, works like a human would want it to lol
+console.log(itemList.children);
+// brackets work with it
+console.log(itemList.children[1]);
+itemList.children[1].style.backgroundColor="yellow";
