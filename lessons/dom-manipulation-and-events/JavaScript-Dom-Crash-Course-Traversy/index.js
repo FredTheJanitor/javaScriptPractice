@@ -203,16 +203,39 @@ var itemList = document.querySelector('#items');
 
 // EVENTS MUTHAFUCKA HEY HIGH HOWYA DRRRRRRRRNNNNN
 
-var button = document.getElementById('button').addEventListener("click", buttonClick);
+// var button = document.getElementById('button').addEventListener("click", buttonClick);
 
-function buttonClick(e) {
+// function buttonClick(e) {
     // console.log('button clicked');
     // document.getElementById('header-title').textContent = 'the bitch';
     // document.querySelector('#main').style.backgroundColor = "#666666ff";
     // console.log(e);
     // what element is it from
-    console.log(e.target);
-    console.log(e.target.id);
-    console.log(e.target.className);
-    console.log(e.target.classList);
+//     console.log(e.target);
+//     console.log(e.target.id);
+//     console.log(e.target.className);
+//     console.log(e.target.classList);
+//     var output = document.getElementById('output');
+//     output.innerHTML = '<h3>'+e.target.id+'</h3>';
+//     console.log(e.type);
+    // console.log(e.clientX);
+    // console.log(e.clientY);
+
+    // console.log(e.offsetX);
+    // console.log(e.offsetY);
+    // console.log('Button Click Instance')
+    // console.log('holding down alt?: '+e.altKey);
+    // console.log('holding down ctrl?: '+e.ctrlKey);
+    // console.log('holding down shift?: '+e.shiftKey);
+// }
+
+// EVENT TYPES:
+
+var button = document.getElementById('button')
+
+// button.addEventListener("click", runEvent);
+button.addEventListener("dbclick", runEvent);
+
+function runEvent(e){
+    console.log('Event Type: '+e.type);
 }
