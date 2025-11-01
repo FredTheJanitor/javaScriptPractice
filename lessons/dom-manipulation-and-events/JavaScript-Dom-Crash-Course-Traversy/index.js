@@ -122,17 +122,38 @@ var itemList = document.querySelector('#items');
 // this is because there are linebreaks. which is a PAIN so fuck childNodes.
 // children is way better:
 
-// .children: html collection, works like a human would want it to lol
-console.log(itemList.children);
-// brackets work with it
-console.log(itemList.children[1]);
-itemList.children[1].style.backgroundColor="yellow";
+// // .children: html collection, works like a human would want it to lol
+// console.log(itemList.children);
+// // brackets work with it
+// console.log(itemList.children[1]);
+// itemList.children[1].style.backgroundColor="yellow";
 
-// firstChild property works like childNodes believe it or not
+// // firstChild property works like childNodes believe it or not
+// // so it kinda sucks, it logs line breaks and text nodes and shit
+// console.log(itemList.firstChild);
+
+// // firstElementChild is the one that works like you'd expect
+
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent="hello bitch";
+
+// lastChild property works like childNodes believe it or not
 // so it kinda sucks, it logs line breaks and text nodes and shit
-console.log(itemList.firstChild);
+// console.log(itemList.lastChild);
 
-// firstElementChild is the one that works like you'd expect
+// // firstElementChild is the one that works like you'd expect
 
-console.log(itemList.firstElementChild);
-itemList.firstElementChild.textContent="hello bitch";
+// console.log(itemList.lastElementChild);
+// itemList.lastElementChild.textContent="hello bitch";
+
+// siblings
+
+// nextSibling (suuuucks it does the text nodes)
+
+console.log(itemList.nextSibling);
+
+// nextElementSibiling way better fuck them nodes my guy
+
+// null because there are none lol.
+console.log(itemList.nextElementSibling);
+// I added a span and now it will show span
