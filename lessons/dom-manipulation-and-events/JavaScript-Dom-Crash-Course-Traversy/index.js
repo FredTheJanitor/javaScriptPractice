@@ -127,3 +127,12 @@ console.log(itemList.children);
 // brackets work with it
 console.log(itemList.children[1]);
 itemList.children[1].style.backgroundColor="yellow";
+
+// firstChild property works like childNodes believe it or not
+// so it kinda sucks, it logs line breaks and text nodes and shit
+console.log(itemList.firstChild);
+
+// firstElementChild is the one that works like you'd expect
+
+console.log(itemList.firstElementChild);
+itemList.firstElementChild.textContent="hello bitch";
