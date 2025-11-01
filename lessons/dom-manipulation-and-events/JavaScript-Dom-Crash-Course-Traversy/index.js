@@ -203,11 +203,12 @@ var itemList = document.querySelector('#items');
 
 // EVENTS MUTHAFUCKA HEY HIGH HOWYA DRRRRRRRRNNNNN
 
+var button = document.getElementById('button').addEventListener("click", buttonClick);
+
 function buttonClick(e) {
     // console.log('button clicked');
     // document.getElementById('header-title').textContent = 'the bitch';
     // document.querySelector('#main').style.backgroundColor = "#666666ff";
-    console.log(e)
+    console.log(e);
 }
 
-var button = document.getElementById('button').addEventListener("click", buttonClick);
