@@ -203,3 +203,6 @@ var itemList = document.querySelector('#items');
 
 // EVENTS MUTHAFUCKA HEY HIGH HOWYA DRRRRRRRRNNNNN
 
+function buttonClick() {
+    console.log('button clicked');
+}
