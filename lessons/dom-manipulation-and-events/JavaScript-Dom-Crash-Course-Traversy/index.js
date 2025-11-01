@@ -90,13 +90,20 @@
 
 // QuerySelectorAll
 
-var titles = document.querySelectorAll('.title');
-console.log(titles);
-titles[0].textContent = 'Hello';
+// var titles = document.querySelectorAll('.title');
+// console.log(titles);
+// titles[0].textContent = 'Hello';
 
-var odd = document.querySelectorAll('li:nth-child(odd)')
-var even = document.querySelectorAll('li:nth-child(even)')
-for(var i = 0; i < odd.length; i++) {
-    odd[i].style.backgroundColor = '#f4f4f4';
-    even[i].style.backgroundColor = 'rgba(175, 175, 175, 1)';
-}
+// var odd = document.querySelectorAll('li:nth-child(odd)')
+// var even = document.querySelectorAll('li:nth-child(even)')
+// for(var i = 0; i < odd.length; i++) {
+//     odd[i].style.backgroundColor = '#f4f4f4';
+//     even[i].style.backgroundColor = 'rgba(175, 175, 175, 1)';
+// }
+
+// TRAVERSING THE DOM
+
+// parent nodes:
+var itemList = document.querySelector('#items');
+// parentNode property:
+console.log(itemList.parentNode);
