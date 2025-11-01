@@ -204,5 +204,8 @@ var itemList = document.querySelector('#items');
 // EVENTS MUTHAFUCKA HEY HIGH HOWYA DRRRRRRRRNNNNN
 
 function buttonClick() {
-    console.log('button clicked');
+    // console.log('button clicked');
+    document.getElementById('header-title').textContent = 'the bitch'
 }
+
+var button = document.getElementById('button').addEventListener("click", buttonClick);
