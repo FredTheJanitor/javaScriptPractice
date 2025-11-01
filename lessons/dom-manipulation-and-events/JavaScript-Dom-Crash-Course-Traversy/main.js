@@ -60,6 +60,7 @@ function filterItems(e){
     console.log(items);
     Array.from(items).forEach((item)=>{
         var itemName = item.firstChild.textContent;
+        // this is the old school way of writing includes() i guess lol
         if (itemName.toLowerCase().indexOf(text) != -1){
             item.style.display = 'block';
         } else {
