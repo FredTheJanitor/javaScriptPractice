@@ -150,10 +150,56 @@ var itemList = document.querySelector('#items');
 
 // nextSibling (suuuucks it does the text nodes)
 
-console.log(itemList.nextSibling);
+// console.log(itemList.nextSibling);
 
-// nextElementSibiling way better fuck them nodes my guy
+// // nextElementSibiling way better fuck them nodes my guy
 
-// null because there are none lol.
-console.log(itemList.nextElementSibling);
-// I added a span and now it will show span
+// // null because there are none lol.
+// console.log(itemList.nextElementSibling);
+// // I added a span and now it will show span
+
+// previousSibling vs previousElementSibling
+
+// // dumb text node
+// console.log(itemList.previousSibling);
+// // welcome to the land of h2 muthafucka (thats the prev element lol)
+// console.log(itemList.previousElementSibling);
+// itemList.previousElementSibling.style.color="#13dfdfff";
+
+
+// creating elements and inserting them
+
+// createElement
+
+// make a div
+
+// var newDiv = document.createElement('div');
+// console.log(newDiv);
+
+// // add className to div
+// newDiv.className="hello";
+
+// // add ID to div:
+// newDiv.id = "hello1";
+
+// // add attribute/ or title kinda thing
+// newDiv.setAttribute('title', 'Hello Div');
+
+// // create the text node
+// var newDivText = document.createTextNode('Hello muthafucka');
+
+// // add text to div
+// newDiv.appendChild(newDivText);
+
+// // find where u want to put it
+
+// var container = document.querySelector('header .container');
+// var h1 = document.querySelector('header h1');
+
+// newDiv.style.fontSize="2rem";
+
+// // insertBefore will put it before something
+// container.insertBefore(newDiv, h1)
+
+// EVENTS MUTHAFUCKA HEY HIGH HOWYA DRRRRRRRRNNNNN
+
