@@ -209,6 +209,10 @@ function buttonClick(e) {
     // console.log('button clicked');
     // document.getElementById('header-title').textContent = 'the bitch';
     // document.querySelector('#main').style.backgroundColor = "#666666ff";
-    console.log(e);
+    // console.log(e);
+    // what element is it from
+    console.log(e.target);
+    console.log(e.target.id);
+    console.log(e.target.className);
+    console.log(e.target.classList);
 }
-
